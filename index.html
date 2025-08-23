@@ -8,7 +8,93 @@
 </head>
 <body>
     <div class="spotlight">
-    <p>hello world</p>
+    </div>
+  <div class="sticky">
+    <div class="stckDiv">
+          <h2>Alefiyah Madarwala</h2>
+          <h3>Full-Stack Developer</h3>
+          <h4>I design and build complete web applications by handling both the frontend (user interface) and the backend (server, database, and APIs).</h4>
+          <ul>
+            <li>About</li>
+            <li>Projects</li>
+            <li>Blogs</li>
+          </ul>
+          <ol>
+            <li><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github"/></li>
+            <li><img width="30" height="30" src="https://img.icons8.com/ios-filled/30/gmail-new.png" alt="gmail-new"/></li>
+            <li><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/linkedin.png" alt="linkedin"/></li>
+            <li><img width="30" height="30" src="https://img.icons8.com/small/30/leetcode.png" alt="leetcode"/></li>
+            <li><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/phone.png" alt="phone"/></li>
+          </ol>
+          </div>
+
+    </div>
+    <div class="scrolldiv">
+      <div class="about">
+        <p>I’m a <span>BBA graduate</span> and <span>Full Stack Web Developer</span>  passionate about building responsive, user-centric, and accessible web applications. With hands-on experience in <span>HTML5, CSS3, JavaScript, ReactJS, and Node.js</span>. I enjoy working at the intersection of design and development, ensuring that the solutions I create are both visually engaging and technically robust.
+
+During my 9-month immersive training at <span>NeoG Camp</span>, I built multiple projects that reflect my skills in <span>frontend development, backend integration, version control (Git/GitHub), responsive design, and web hosting</span>. I thrive on creating seamless user experiences and am eager to bring the same dedication and creativity to real-world projects.
+
+As a fresher, I’m actively seeking an internship or entry-level opportunity where I can contribute to impactful web solutions while continuing to learn and grow as a developer.</p>
+      </div>
+
+      <div class="projects">
+
+        <ul>
+          <li>
+            <img src="images/React-App-08-23-2025_11_12_AM.png"/>
+            <span>
+              <h3><a href="https://ultimatebookstore.netlify.app/" target="_blank">E-Commerce ↝</a></h3>
+              <p>E-Commerce Website – Developed a fully functional eCommerce application with product listing, cart, and checkout features, using <b>ReactJS, JavaScript, HTML5, CSS3 for the frontend, Node.js for the backend, and deployed with GitHub & Web Hosting</b>.</p>
+            </span>
+          </li>
+          <li>
+            <img src="images/React-App-08-23-2025_12_27_PM.png"/>
+            <span>
+              <h3> <a href="https://chaturchat.netlify.app/" target="_blank">Linkedinmini ↝</a></h3>
+              <p>A mini community platform where users can sign up, log in, and create posts visible in a public feed with author details and timestamps. Built with <b>ReactJS, HTML5, CSS3, featuring a custom LocalStorage-based authentication system</b>.</p>
+            </span>
+          </li>
+           <li>
+            <img src="images/React-App-08-23-2025_12_05_PM.png"/>
+            <span>
+              <h3><a href="https://bubble101.netlify.app/" target="_blank">Bubble ↝</a></h3>
+              <p>Built a social media web app enabling users to create posts, interact, and manage profiles, developed with <b>ReactJS, JavaScript, HTML5, CSS3, integrated with a Node.js backend, and deployed using GitHub & Web Hosting</b>.</p>
+            </span>
+          </li>
+          <li>
+            <img src="images/React-App-08-23-2025_12_22_PM.png"/>
+            <span>
+              <h3> <a href="https://abletonlevel1.netlify.app/" target="_blank">Ableton ↝</a></h3>
+              <p>Designed a responsive replica of the <b>Ableton website</b> focusing on clean UI, accessibility, and performance, developed primarily using <b>HTML5, CSS3 (with CSS Grid for layout), and deployed via GitHub & Web Hosting</b>.</p>
+            </span>
+          </li>
+
+
+        </ul>
+
+      </div>
+      <div class="blog">
+        <ul>
+          <li>
+            <img src="/images/pexels-jan-van-der-wolf-11680885-33566619.jpg"/>
+            <span>
+              <h4>2023</h4>
+              <h5>What are higher order function? ↝</h5>
+            </span>
+          </li>
+             <li>
+            <img src="/images/pexels-padrinan-2882670.jpg"/>
+            <span>
+              <h4>2023</h4>
+              <h5>What are higher order function? ↝</h5>
+            </span>
+          </li>
+        </ul>
+
+
+      </div>
+
     </div>
 
 
@@ -17,14 +103,25 @@
 
 
 
-
     <script>
+      
     const spotlight = document.querySelector('.spotlight');
+
+    
 
     document.addEventListener('mousemove', (e) => {
       spotlight.style.setProperty('--x', `${e.clientX}px`);
       spotlight.style.setProperty('--y', `${e.clientY}px`);
     });
+    
+    document.addEventListener('mouseenter', () => {
+      spotlight.style.opacity = 1; // fade in
+    });
+
+    document.addEventListener('mouseleave', () => {
+      spotlight.style.opacity = 0; // fade out
+    });
+    const projects = [{title:"E-commerce"  , link:""}]
   </script>
 
 </body>

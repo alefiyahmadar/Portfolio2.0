@@ -5,31 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
         <link href="style.css" rel="stylesheet" />
+         <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
-    <div class="spotlight">
+    <div id="spotlight">
     </div>
-  <div class="sticky">
-    <div class="stckDiv">
+  <div id="sticky">
+    <div id="stckDiv">
           <h2>Alefiyah Madarwala</h2>
           <h3>Full-Stack Developer</h3>
           <h4>I design and build complete web applications by handling both the frontend (user interface) and the backend (server, database, and APIs).</h4>
           <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#blog"></a>Blogs</li>
+            <li><a href="#blog">Blogs</a></li>
           </ul>
           <ol>
-            <li><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github"/></li>
-            <li><img width="30" height="30" src="https://img.icons8.com/ios-filled/30/gmail-new.png" alt="gmail-new"/></li>
-            <li><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/linkedin.png" alt="linkedin"/></li>
-            <li><img width="30" height="30" src="https://img.icons8.com/small/30/leetcode.png" alt="leetcode"/></li>
-            <li><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/phone.png" alt="phone"/></li>
+            <li><a href="https://github.com/alefiyahmadar" target="_blank"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/e5e7eb/github.png" alt="github"/></a></li>
+            <li>
+            <a href="mailto:alefiyahmadarwala@gmail.com" ><img width="30" height="30" src="https://img.icons8.com/ios-filled/30/e5e7eb/gmail-new.png" alt="gmail-new"/></a></li>
+            <li><a href="https://www.linkedin.com/in/alefiyah-madarwala-16b821259/" target="_blank"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/e5e7eb/linkedin.png" alt="linkedin"/></a></li>
+
+            <li><a href="https://leetcode.com/u/alefiyahmadar/" target="_blank"><img width="30" height="30" src="https://img.icons8.com/small/30/e5e7eb/leetcode.png" alt="leetcode"/></a></li>
+
+            <li class="fas fa-phone phone-icon" id="copyPhone"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/e5e7eb/phone--v1.png" alt="phone--v1"/></li>
+                <div class="tooltip" id="tooltip">Number copied!</div>
           </ol>
           </div>
 
     </div>
-    <div class="scrolldiv">
+    <div id="scrolldiv">
       <div id="about">
         <p>I’m a <span>BBA graduate</span> and <span>Full Stack Web Developer</span>  passionate about building responsive, user-centric, and accessible web applications. With hands-on experience in <span>HTML5, CSS3, JavaScript, ReactJS, and Node.js</span>. I enjoy working at the intersection of design and development, ensuring that the solutions I create are both visually engaging and technically robust.
 
@@ -121,7 +126,17 @@ As a fresher, I’m actively seeking an internship or entry-level opportunity wh
     document.addEventListener('mouseleave', () => {
       spotlight.style.opacity = 0; // fade out
     });
-    const projects = [{title:"E-commerce"  , link:""}]
+      const phoneIcon = document.getElementById('copyPhone');
+    const tooltip = document.getElementById('tooltip');
+
+    const phoneNumber = "+91 8758349227"; // your number here
+
+    phoneIcon.addEventListener('click', () => {
+      navigator.clipboard.writeText(phoneNumber).then(() => {
+        tooltip.classList.add("show");
+        setTimeout(() => tooltip.classList.remove("show"), 1500);
+      });
+    });
   </script>
 
 </body>

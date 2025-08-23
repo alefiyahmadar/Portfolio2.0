@@ -12,6 +12,7 @@ body{
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-feature-settings: "ss03", "cv02", "cv11";
     letter-spacing: 0.02rem;
+     scroll-behavior: smooth;
 }
 
 :root {
@@ -19,7 +20,7 @@ body{
   --off-white: oklch(92.8% 0.006 264.531);
   --dark-color: oklch(55.1% 0.027 264.364);
 }
-.spotlight{
+#spotlight{
       position: fixed;
       top: 0;
       left: 0;
@@ -34,7 +35,7 @@ body{
       );
         transition: background 0.08s linear;
     }
-    .sticky{
+    #sticky{
 
       
       display: flex;
@@ -49,13 +50,13 @@ body{
       
       
     }
-    .stckDiv{
+    #stckDiv{
 
       
       margin: auto;
       width: 80%;
     }
-    .sticky h2{
+    #sticky h2{
       margin-left: 5rem;
       padding-top: 0%;
       padding-bottom: 0%;
@@ -64,7 +65,7 @@ body{
       color: var(--off-white);
       
     }
-    .sticky h3{
+    #sticky h3{
 
       margin-left: 5rem;
       margin-top: 0;
@@ -72,14 +73,14 @@ body{
       font-size: 1.5rem;
       color: var(--off-white);
     }
-    .sticky h4{
+    #sticky h4{
 
       margin-left: 5rem;
       margin-top: 0%;
       color: var(--dark-color);
     
     }
-    .sticky ul{
+    #sticky ul{
       margin-left: 3rem;
       margin-top: 10%;
       margin-bottom: 15%;
@@ -90,12 +91,12 @@ body{
       
 
     }
-    .sticky ul a{
+    #sticky ul a{
 
       text-decoration: none;
       color: var(--dark-color);
     }
-    .sticky ul li{
+    #sticky ul li{
 
       margin-bottom: 2rem;
           display: inline-block; 
@@ -103,7 +104,7 @@ body{
     text-align: left;
     font-size: large;
     }
-    .sticky ul :hover{
+    #sticky ul :hover{
       color: var(--off-white);
       transform: translateY(-5px); 
     
@@ -112,26 +113,28 @@ body{
 
 
     }
-    .sticky ol{
+    #sticky ol{
       margin-left: 5rem;
       display: flex;
+      justify-content: space-evenly;
       list-style: none;
       width: 50%;
-      justify-content: space-around;
+
+  
       
       
       
     }
-    .scrolldiv{
+    #scrolldiv{
 
     
       display: flex;
       flex-direction: column;
       margin: auto;
       position: sticky;
-       top: 0;                /* keeps it stuck at top */
-  height: 100vh;         /* take full viewport height */
-  overflow-y: auto;      /* enable vertical scrollbar */
+       top: 0;                
+  height: 100vh;         
+  overflow-y: auto;      
   overflow-x: hidden;
   scrollbar-width: none;
   
@@ -179,7 +182,7 @@ body{
 
     }
     #projects li:hover {
-     background: rgba(255,255,255,0.1); /* overlay color */
+     background: rgba(255,255,255,0.1); 
      border-radius: 0.5rem;
   
   }
@@ -245,4 +248,24 @@ body{
     #blog a{
       text-decoration: none;
       color: var(--dark-color);
+    }
+    
+    .phone-icon {
+
+      cursor: pointer;
+    
+    }
+
+    
+
+    .tooltip {
+      margin-top: 10px;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      color: var(--off-white);
+    }
+
+    .tooltip.show {
+      opacity: 1;
     }

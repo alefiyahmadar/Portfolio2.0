@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
 body{
 
     margin: 0;
@@ -8,6 +13,7 @@ body{
     font-feature-settings: "ss03", "cv02", "cv11";
     letter-spacing: 0.02rem;
 }
+
 :root {
   --primary-color:#0A1130;
   --off-white: oklch(92.8% 0.006 264.531);
@@ -84,6 +90,11 @@ body{
       
 
     }
+    .sticky ul a{
+
+      text-decoration: none;
+      color: var(--dark-color);
+    }
     .sticky ul li{
 
       margin-bottom: 2rem;
@@ -127,7 +138,7 @@ body{
     
     }
 
-    .about{
+    #about{
 
       
       padding: 5rem;
@@ -137,11 +148,11 @@ body{
       width: 60%;
     
     }
-    .about span{
+    #about span{
 
       color: var(--off-white);
     }
-    .projects{
+    #projects{
 
 
     
@@ -149,12 +160,12 @@ body{
       flex-direction: column;
       width: 80%;
     }
-    .projects a{
+    #projects a{
 
       text-decoration: none;
       color: var(--off-white);
     }
-    .projects li{
+    #projects li{
 
       display: flex;
       
@@ -167,66 +178,71 @@ body{
     
 
     }
-    .projects li:hover {
+    #projects li:hover {
      background: rgba(255,255,255,0.1); /* overlay color */
      border-radius: 0.5rem;
   
   }
-    .projects img{
+    #projects img{
 
       max-width: 30%;
       height: 20vh;
       border-radius:0.5rem ;
       
     }
-    .projects span{
+    #projects span{
 
       padding: 1rem;
     }
-    .projects h3{
+    #projects h3{
       color: var(--off-white);
       margin-top: 0%;
       margin-inline-start: 0%;
     }
-    .projects p{
+    #projects p{
       color: var(--dark-color);
       font-size: small;
     }
-    .projects b{
+    #projects b{
 
       color: var(--off-white);
       font-weight: 400;
     }
-    .blog{
+    #blog{
 
       display: flex;
       flex-direction: column;
       width: 70%;
       margin-left:0%;
       margin-top: 5rem;
+      margin-bottom: 5rem;
     }
-    .blog li{
+    #blog li{
 
       display: flex;
       flex-direction: row;
+      margin-top: 2rem;
     }
-    .blog img{
+    #blog img{
 
       width: 10rem;
       border-radius:0.5rem ;
     }
-    .blog h4{
+    #blog h4{
       padding: 0.5rem;
       color: var(--off-white);
       margin-bottom: 0%;
       padding-bottom: 0%;
       font-size: small;
     }
-    .blog h5{
+    #blog h5{
 
       padding: 0.5rem;
       margin-top: 0%;
       color: var(--dark-color);
       font-size: 1rem;
     }
-    
+    #blog a{
+      text-decoration: none;
+      color: var(--dark-color);
+    }

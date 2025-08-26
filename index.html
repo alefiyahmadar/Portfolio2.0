@@ -8,7 +8,7 @@
          <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
-    <div id="spotlight">
+    <div class="spotlight">
     </div>
   <div id="sticky">
     <div id="stckDiv">
@@ -36,7 +36,8 @@
     </div>
     <div id="scrolldiv">
       <div id="about">
-        <p>I’m a <span>BBA graduate</span> and <span>Full Stack Web Developer</span>  passionate about building responsive, user-centric, and accessible web applications. With hands-on experience in <span>HTML5, CSS3, JavaScript, ReactJS, and Node.js</span>. I enjoy working at the intersection of design and development, ensuring that the solutions I create are both visually engaging and technically robust.
+        <h3>About</h3>
+        <p>I’m a <span>BBA graduate</span> and <span>Full Stack Web Developer</span>  passionate about building responsive, user-centric, and accessible web applications. With hands-on experience in <span>HTML5, CSS3, JavaScript, ReactJS, Node.js and Responsive web design</span>. I enjoy working at the intersection of design and development, ensuring that the solutions I create are both visually engaging and technically robust.
 
 During my 9-month immersive training at <span>NeoG Camp</span>, I built multiple projects that reflect my skills in <span>frontend development, backend integration, version control (Git/GitHub), responsive design, and web hosting</span>. I thrive on creating seamless user experiences and am eager to bring the same dedication and creativity to real-world projects.
 
@@ -44,6 +45,7 @@ As a fresher, I’m actively seeking an internship or entry-level opportunity wh
       </div>
 
       <div id="projects">
+        <h2>Projects</h2>
 
         <ul>
           <li>
@@ -80,6 +82,7 @@ As a fresher, I’m actively seeking an internship or entry-level opportunity wh
 
       </div>
       <div id="blog">
+        <h3>Blogs</h3>
         <ul>
           <li>
             <img src="/images/pexels-jan-van-der-wolf-11680885-33566619.jpg"/>
@@ -131,11 +134,13 @@ As a fresher, I’m actively seeking an internship or entry-level opportunity wh
 
     const phoneNumber = "+91 8758349227"; // your number here
 
-    phoneIcon.addEventListener('click', () => {
-      navigator.clipboard.writeText(phoneNumber).then(() => {
-        tooltip.classList.add("show");
-        setTimeout(() => tooltip.classList.remove("show"), 1500);
-      });
+   phoneIcon.addEventListener('click', () => {
+     navigator.clipboard.writeText(phoneNumber).then(() => {
+       tooltip.classList.add("show");
+       setTimeout(() => tooltip.classList.remove("show"), 1500);
+     });
+
+
     });
   </script>
 

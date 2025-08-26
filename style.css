@@ -170,7 +170,7 @@ body{
       flex-direction: column;
       width: 80%;
     }
-    #projects h3{
+    #projects h2{
       display: none;
     }
     #projects a{
